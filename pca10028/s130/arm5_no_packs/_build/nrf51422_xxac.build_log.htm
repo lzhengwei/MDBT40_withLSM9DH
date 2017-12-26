@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 123, 123, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         
+Dialog DLL:      
+Target DLL:      Segger\JL2CM3.dll V2.99.11.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+D:\研究室資料\NRF51822 Data\SDK\nRF5_SDK_12.3.0_d7731ad\examples\ble_peripheral\ble_app_uart_with_spi\pca10028\s130\arm5_no_packs\ble_app_uart_pca10028_s130.uvprojx
+Project File Date:  09/09/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'nrf51422_xxac'
+compiling main.c...
+..\..\..\..\..\..\components\libraries\myfunction\function.h(10): warning:  #1295-D: Deprecated declaration SDCtest - give arg types
+  void SDCtest();
+..\..\..\..\..\..\components\libraries\myfunction\function.h(12): warning:  #1-D: last line of file ends without a newline
+  bool Writefile(char* fileName, char *buffT,int size);	
+..\..\..\main.c(59): warning:  #47-D: incompatible redefinition of macro "NRF_LOG_MODULE_NAME" (declared at line 60 of "..\..\..\..\..\..\components\libraries\log\nrf_log.h")
+  #define NRF_LOG_MODULE_NAME "APP"
+..\..\..\main.c(235): warning:  #223-D: function "nrf_drv_gpiote_out_toggle" declared implicitly
+  				nrf_drv_gpiote_out_toggle(one);
+..\..\..\main.c(250): warning:  #223-D: function "nrf_drv_gpiote_out_set" declared implicitly
+  					nrf_drv_gpiote_out_set(two);
+..\..\..\main.c(279): warning:  #550-D: variable "xx" was set but never used
+  	uint8_t xx[2],send[3];
+..\..\..\main.c(345): warning:  #223-D: function "nrf_drv_gpiote_out_toggle" declared implicitly
+  		nrf_drv_gpiote_out_toggle(one);
+..\..\..\main.c(317): warning:  #550-D: variable "xx" was set but never used
+  	static uint8_t xx[BLE_NUS_MAX_DATA_LEN];
+..\..\..\main.c(501): warning:  #550-D: variable "xx" was set but never used
+      uint8_t xx[1];
+..\..\..\main.c(800): warning:  #223-D: function "nrf_drv_gpiote_out_toggle" declared implicitly
+  		nrf_drv_gpiote_out_toggle(three);
+..\..\..\main.c(803): warning:  #177-D: variable "rx_temp" was declared but never referenced
+  	uint8_t rx_temp[6];
+..\..\..\main.c(1006): warning:  #188-D: enumerated type mixed with another type
+  	  spi_address=spi_master_init(SPI1,0,false);
+..\..\..\main.c(1038): warning:  #9-D: nested comment is not allowed
+  		spi_master_tx_rx(spi_address, 2, (const uint8_t *)CTRL_REG1_DATA, rx_temp,CSselect);	//*/
+..\..\..\main.c(1087): warning:  #223-D: function "nrf_drv_gpiote_out_set" declared implicitly
+  					nrf_drv_gpiote_out_set(one);					
+..\..\..\main.c(1088): warning:  #223-D: function "nrf_drv_gpiote_out_clear" declared implicitly
+  					nrf_drv_gpiote_out_clear(two);
+..\..\..\main.c(1099): warning:  #223-D: function "nrf_drv_gpiote_out_set" declared implicitly
+  					nrf_drv_gpiote_out_set(two);					
+..\..\..\main.c(1100): warning:  #223-D: function "nrf_drv_gpiote_out_clear" declared implicitly
+  					nrf_drv_gpiote_out_clear(one);					
+..\..\..\main.c(968): warning:  #177-D: variable "erase_bonds" was declared but never referenced
+      bool erase_bonds;
+..\..\..\main.c(969): warning:  #550-D: variable "success_string" was set but never used
+  		uint8_t success_string[5];
+..\..\..\main.c(1011): warning:  #177-D: variable "tx_temp" was declared but never referenced
+  		uint8_t tx_temp[2]={0xA8,0xA8},rx_temp[2]={0x00,0x00};
+..\..\..\main.c(1012): warning:  #177-D: variable "xx" was declared but never referenced
+  		uint8_t xx[2],send[3];	
+..\..\..\main.c(1012): warning:  #177-D: variable "send" was declared but never referenced
+  		uint8_t xx[2],send[3];	
+..\..\..\main.c(1054): warning:  #550-D: variable "accff_result" was set but never used
+  		FRESULT accff_result;
+..\..\..\main.c(123): warning:  #550-D: variable "m_tx_buf" was set but never used
+  static uint8_t       m_tx_buf[] = TEST_STRING;           /**< TX buffer. */
+..\..\..\main.c(124): warning:  #177-D: variable "m_rx_buf" was declared but never referenced
+  static uint8_t       m_rx_buf[sizeof(TEST_STRING)+1];    /**< RX buffer. */
+..\..\..\main.c(125): warning:  #177-D: variable "m_length" was declared but never referenced
+  static const uint8_t m_length = sizeof(m_tx_buf);        /**< Transfer length. */
+..\..\..\main.c(680): warning:  #177-D: function "uart_init" was declared but never referenced
+  static void uart_init(void)
+..\..\..\main.c(737): warning:  #177-D: function "buttons_leds_init" was declared but never referenced
+  static void buttons_leds_init(bool * p_erase_bonds)
+..\..\..\main.c(859): warning:  #177-D: function "fatfs_example" was declared but never referenced
+  static void fatfs_example()
+..\..\..\main.c: 29 warnings, 0 errors
+linking...
+Program Size: Code=20580 RO-data=488 RW-data=264 ZI-data=7880  
+FromELF: creating hex file...
+".\_build\nrf51422_xxac.axf" - 0 Error(s), 29 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM.CMSIS.4.5.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1.pack
+                NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1
+                Nordic Semiconductor nRF ARM devices Device Family Pack.
+   * Component: Startup Version: 8.11.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_nrf51422_xxac
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: NordicSemiconductor::Device:Startup:8.11.1
+      Source file:   Device\Source\system_nrf51.c
+      Source file:   Device\Source\arm\arm_startup_nrf51.s
+      Include file:  Device\Include\system_nrf51.h
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
