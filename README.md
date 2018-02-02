@@ -21,7 +21,7 @@ Use Kil uVison to develope MDBT(nrf51822) project.
 
 Initial of project is **ble_peripheral/ble_app_uart.**
 
-Extend other fnction SPI、Timer and FATFS.
+Extend other fnction **SPI、Timer and FATFS.**
 
 # Send/Receive Message through Ble uart
 ## Send
