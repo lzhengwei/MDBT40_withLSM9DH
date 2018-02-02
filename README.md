@@ -13,12 +13,12 @@ LSM9DS、LIS3DH and Micro SD card connect to MDBT40 through SPI protcol.
 
 # MDBT40 program Environment
 Use Kil uVison to develope MDBT(nrf51822) project.
+| Tool  | version |
+| ---------- | -----------|
+| Softdevice | s130_nrf51_2.0.1 |
+| SDK | nRF5_SDK_12.3.0 |
 
-softdevice : s130_nrf51_2.0.1
-
-SDK : nRF5_SDK_12.3.0
-
-Initial of project is ble_peripheral/ble_app_uart.
+Initial of project is **ble_peripheral/ble_app_uart.**
 
 Extend other fnction SPI、Timer and FATFS.
 
