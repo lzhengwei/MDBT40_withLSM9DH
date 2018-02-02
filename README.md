@@ -25,36 +25,36 @@ Extend other fnction SPI、Timer and FATFS.
 # Send/Receive Message through Ble uart
 ## Send
 Ble Uart send function is :
-
+```
 ble_nus_string_send(&m_nus,accdata, 18);
-
+```
 m_nus : BLE nus parameter. Initial project had Declared.
 
 accdata,18 : sending data and length. Accdata is an uint8_t array. Send byte array according the length you set, Max length is 21.Gatt pakage definition limit data length.  
 
 ## Receive
 Ble Uart Receive event is on 
-
-"nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)"
-
+```
+nus_data_handler(ble_nus_t * p_nus, uint8_t * p_data, uint16_t length)
+```
 and receive data is on "p_data" with "length".p_data is a byte array. 
 
 # SPI function
 ## Write 
 For LSM9DS or LIS3DH, need to set some register first.
-
+```c
 uint8_t CTRL_REG1_DATA[2]; // an byte array
 
 CTRL_REG1_DATA[0]=0x20; // Here is register address. For LSM9DS, 0x20 is CTRL_REG1_XM's address.
 
 CTRL_REG1_DATA[1]=0x77; // value to write. For LSM9DS, it is enable accelerometer and set frequency.
-
+```
 spi_master_tx_rx(spi_address, 2, (const uint8_t *)CTRL_REG1_DATA, rx_temp,CSselect);// this function is for write and read in SPI. 
 if want to write for SPI, just use this function and It will write CTRL_REG1_DATA value after excute this.
 
 ## read
 It is same way to read value through SPI
-
+``` c
 uint8_t rx_temp[2];
 
 uint8_t CTRL_REG1_DATA[2]; // byte array
@@ -65,13 +65,13 @@ CTRL_REG1_DATA[1]=0x00; // this is trash code maybe. In read mode dont need this
 
 spi_master_tx_rx(spi_address, 2, (const uint8_t *)CTRL_REG1_DATA, rx_temp,CSselect);// this function is for write and read in SPI. 
 after excute this function, the vaule will save at "rx_temp[1]" not "rx_temp[0]". I don't know why happen this. 
-
+```
 For LSM9DS or LIS3DH you could declare an byte array for Data-Out register.
 
 Like this "static uint8_t ACC_read_address[6][2]={{0xA9,0xFF},{0xA8,0xFF},{0xAB,0xFF},{0xAA,0xFF},{0xAD,0xFF},{0xAC,0xFF}};"
 
 Then use loop to read sensor data.
-
+``` c
 for(int i=0;i<6;i++)
 
 	{	
@@ -81,7 +81,7 @@ for(int i=0;i<6;i++)
 		accdata[i]=rxx[1];	//save raw data at array accdata.
 		
 	}
-	
+```	
   
   Here just simply introduce some key function at ble-uart and spi.
   
