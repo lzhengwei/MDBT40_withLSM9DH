@@ -1,4 +1,4 @@
-# MDBT40_withLSM9DH
+# MDBT40 with LSM9DS
 This project for MCU MDBT40, which is base on Nordic IC Nrf51822.
 
 Goal of this project is collect triaxial-accelerometer data from LSM9DS or LIS3DH IC through bluetooth.
