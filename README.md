@@ -69,7 +69,10 @@ after excute this function, the vaule will save at "rx_temp[1]" not "rx_temp[0]"
 ```
 For LSM9DS or LIS3DH you could declare an byte array for Data-Out register.
 
-Like this "static uint8_t ACC_read_address[6][2]={{0xA9,0xFF},{0xA8,0xFF},{0xAB,0xFF},{0xAA,0xFF},{0xAD,0xFF},{0xAC,0xFF}};"
+Like this 
+```
+static uint8_t ACC_read_address[6][2]={{0xA9,0xFF},{0xA8,0xFF},{0xAB,0xFF},{0xAA,0xFF},{0xAD,0xFF},{0xAC,0xFF}};
+```
 
 Then use loop to read sensor data.
 ``` c
