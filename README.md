@@ -1,18 +1,18 @@
-# MDBT40 with LSM9DS
+# Nrf51822 with LSM9DS 
 This project for MCU MDBT40, which is base on Nordic IC Nrf51822.
 
 Goal of this project is collect triaxial-accelerometer data from LSM9DS or LIS3DH IC through bluetooth.
 
 # Artitecture 
-MDBT40(nrf51822) connect to android or windows10 UWP application send raw data through Bluetooth Low Energy(BLE).
+Nrf51822(MDBT40) connect to android or windows10 UWP application send raw data through Bluetooth Low Energy(BLE).
 
-(I have another project for UWP and Android as Gatt Server, could use it connect to MDBT40(nrf51822))
+(I have another project for UWP and Android as Gatt Server, could use it connect to Nrf51822(MDBT40))
 
-LSM9DS、LIS3DH and Micro SD card connect to MDBT40 through SPI protcol.
+LSM9DS、LIS3DH and Micro SD card connect to Nrf51822 through SPI protcol.
 ![artitecture](https://github.com/lzhengwei/UWP_Nordic_Uart_Transmitter/blob/master/Structure.jpg)
 
-# MDBT40 program Environment
-Use Kil uVison to develope MDBT(nrf51822) project.
+# Nrf51822 program Environment
+Use Kil uVison to develope Nrf51822(MDBT40) project.
 
 | Tool  | version|
 | ---------- | ----------- |
